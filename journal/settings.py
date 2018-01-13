@@ -54,7 +54,10 @@ ROOT_URLCONF = 'journal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # define the custom directory that templates directory is located
+        'DIRS': [
+            os.path.join(BASE_DIR, 'journalapp/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
